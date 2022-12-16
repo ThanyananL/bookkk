@@ -17,22 +17,24 @@
     right: 20px;
 }
 .category{
-    margin-left: 230%;
+    text-align: center;
+    margin-left: 999%;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 50px;
     width: 120px;
 }
 .search{
     margin: 25px;  
     height: 25px;
-    border-radius: 10px;
-    border: 1px solid black;
+    border-radius: 50px;
+    border:none;
+    text-decoration: none;
 }
 .inputbtn{
     margin: -20px;
     height: 25px;
-    border-radius: 5px;
-    border: 1px solid black;
+    border-radius: 25px;
+    border: none;
 }
 input{
     text-align: center;
@@ -46,11 +48,11 @@ button:hover{
 .colorsmode{
     position: relative;
     margin: 25px;
-    width: 80px;
+    width: 40px;
     height: 25px;
     left: 5%;
-    border-radius: 10px;
-    border: 1px solid black; 
+    border-radius: 50px;
+    border: none; 
 }
 .colorsmode:hover{
     transform: scale(1.04)
@@ -60,7 +62,8 @@ button:hover{
     font-family: 'Gloria Hallelujah', cursive;
     padding: -10px;
     margin-left: 20px;
-    color: palevioletred;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* .bookhome{ */
@@ -71,7 +74,7 @@ button:hover{
     display: inline-block;
 }
 .card{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 250px;
     height: 400px;
     padding: 5px;

@@ -6,8 +6,8 @@ export default function footer() {
         <div className='footer'>
             <h2>Aboute Me</h2>
            <footer>
-           <p>Author: @Nayan1096</p>
-            <a href="https://www.linkedin.com/in/ramnayan-yadav-33371b165/" target="_block">google me</a>
+           <p>Book</p>
+            <a href="#" target="_block">google me</a>
            </footer>
         </div>
         </>

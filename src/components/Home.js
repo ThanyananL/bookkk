@@ -18,6 +18,7 @@ export default function Home() {
         setType(e.target.value)
     } 
 
+    //ตรวจสอบกรองชนิดหนังสือ 
     useEffect(()=>{
         if(type==='all'){
             setnewData(Data)
@@ -33,12 +34,14 @@ export default function Home() {
         setInput(e.target.value)
     }
 
+    //ค้นหาข้อมูล 
     function submitInput(){
         // newData=Data.filter(item=>item.title.toLowerCase().slice(0,input.length)===input.toLowerCase())
         newData=Data.filter(item=>item.title.toLowerCase().includes(input.toLowerCase()))
             setnewData(newData);
     }
 
+    // เปลี่ยนสี
     function colorChange(){
         if(colors==='white' || colors==='red'){
             setColor('black');
@@ -58,33 +61,35 @@ export default function Home() {
         <>
         <div className="main">
             <div className="headerbar">
-            <h1 className="logo">Library</h1>
-            <Bookcatagory defaultType={defaultType} />
-           {/* serach bar */}
-            <div className="searchbar" >
-            <input className='search' type="text" onChange={setinput} value={input} placeholder="Search..." />
-            <button className="inputbtn" onClick={submitInput} >search</button>
+                <h1 className="logo"><a href='Home'>Book</a></h1>
+                {/* serach bar */}
+                <div className="searchbar" >
+                <input className='search' type="text" onChange={setinput} value={input} placeholder="Search..." />
+                <button className="inputbtn" onClick={submitInput} >search</button>
+                </div>
+                {/* <Mode/> */}
+                <input type="button" onClick={colorChange}  className="colorsmode" value='&#9790;'/>
+                {/* ตัวกรอง */}
+                <Bookcatagory defaultType={defaultType} />
             </div>
-            {/* <Mode/> */}
-            <input type="button" onClick={colorChange}  className="colorsmode" value='color mode'/>
-            </div>
-            {/* <h2>Book list</h2> */}
             <div style={{background:colors ,color:text}}  className="bookhome" >
+                <h2>Book list</h2>
                 {
                  newData.length>0 ?   
                   newData.map((val)=>{
+                        // จับคู่กับ props books
                         return( 
                             <Book
                             color={text}
                             rates={val.rate}
-                            imgsrc={val.image}
+                            photo={val.image}
                             bstatus={val.status}
                             title={val.title}
                             status={val.writer}
                             link={val.website}
                             />
                         )
-                }) : <h1 style={{color: "#f48c06", fontFamily:"cursive" }}>Book Not Found!📓</h1>
+                }) : <h1 style={{color: "red", fontFamily:"cursive" }}>Book Not Found!</h1>
 
                 }
             </div>
