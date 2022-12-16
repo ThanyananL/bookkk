@@ -7,7 +7,7 @@ export default function footer() {
             <h2>Aboute Me</h2>
            <footer>
            <p>Book</p>
-            <a href="#" target="_block">google me</a>
+            <a href="https://www.linkedin.com/in/ramnayan-yadav-33371b165/" target="_block">google me</a>
            </footer>
         </div>
         </>

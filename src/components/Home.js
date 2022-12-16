@@ -1,10 +1,12 @@
 import React,{useEffect, useState} from 'react';
 import Bookcatagory from'./Bookcatagory';
-//import Search from './Search';
 import './style.css';
 import Book from './Books';
 import Data from './data.json';
 import Footer from './footer.js';
+import Header from './Header';
+import PhotoSlideshow from './PhotoSlideshow';
+//import Search from './Search';
 //import Mode from './Mode';
 
 export default function Home() {
@@ -61,6 +63,7 @@ export default function Home() {
         <>
         <div className="main">
             <div className="headerbar">
+                <Header/>
                 <h1 className="logo"><a href='Home'>Book</a></h1>
                 {/* serach bar */}
                 <div className="searchbar" >
@@ -73,6 +76,8 @@ export default function Home() {
                 <Bookcatagory defaultType={defaultType} />
             </div>
             <div style={{background:colors ,color:text}}  className="bookhome" >
+            <PhotoSlideshow/>
+            <div className='empty'></div>
                 <h2>Book list</h2>
                 {
                  newData.length>0 ?   
