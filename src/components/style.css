@@ -97,6 +97,7 @@ h2{
 
 .cards{
     display: inline-block;
+    margin: 0 15px;
 }
 .card{
     width: 250px;
@@ -111,7 +112,7 @@ h2{
     height: 300px;
     width: 250px;
     opacity: 1;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px;
 }
 
 .book_info{
