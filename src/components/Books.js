@@ -14,7 +14,7 @@ export default function Books(props) {
                   <h3 className='book_title'>{props.title}</h3>
                       <span className="publice">{props.status}</span><br/>
                       <a href={props.link} className="btn" target="_blank" rel="noreferrer">
-                          <button style={{color:"green" ,width:"50px"}}>Details</button>
+                          <button className="book" style={{color:"#fff" ,width:"100px", border: "none",background: "#333",borderRadius:"15px"}}>อ่านเพิ่มเติม</button>
                       </a>
                   </div>
               </div>

@@ -94,13 +94,13 @@ export default function Home() {
                             link={val.website}
                             />
                         )
-                }) : <h1 style={{color: "red", fontFamily:"cursive" }}>Book Not Found!</h1>
+                }) : <h1 style={{color: "red"}}>Book Not Found!</h1>
 
                 }
+            <div className='empty'></div>
             </div>
             <Footer/> 
         </div>
-        {/* <footer/>  */}
         </>
     )
 }
